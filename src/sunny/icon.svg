@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="72%">
+      <stop offset="0" stop-color="#54251d"/>
+      <stop offset="0.62" stop-color="#2b1519"/>
+      <stop offset="1" stop-color="#140d15"/>
+    </radialGradient>
+    <radialGradient id="sun" cx="35%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#fff5a0"/>
+      <stop offset="0.42" stop-color="#ffd85a"/>
+      <stop offset="0.78" stop-color="#ffad27"/>
+      <stop offset="1" stop-color="#e76b16"/>
+    </radialGradient>
+    <linearGradient id="ray" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff29a"/>
+      <stop offset="1" stop-color="#f78a1c"/>
+    </linearGradient>
+    <radialGradient id="node" cx="32%" cy="25%" r="82%">
+      <stop offset="0" stop-color="#ffe98a"/>
+      <stop offset="0.55" stop-color="#ffbd36"/>
+      <stop offset="1" stop-color="#ed741b"/>
+    </radialGradient>
+    <clipPath id="roundCrop">
+      <circle cx="256" cy="256" r="248"/>
+    </clipPath>
+  </defs>
+
+  <rect id="fullbleed" width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="248" fill="url(#bg)"/>
+
+  <g clip-path="url(#roundCrop)">
+    <circle cx="256" cy="256" r="192" fill="none" stroke="#f6a33a" stroke-width="3" opacity=".13"/>
+    <circle cx="256" cy="256" r="158" fill="none" stroke="#ffd46b" stroke-width="2" stroke-dasharray="3 15" opacity=".25"/>
+
+    <g fill="url(#ray)" opacity=".96">
+      <path d="M239 70h34l-5 48h-24z"/>
+      <path d="M334 91l29 17-27 40-25-14z"/>
+      <path d="M408 169l17 29-43 22-14-25z"/>
+      <path d="M442 239v34l-48-5v-24z"/>
+      <path d="M421 334l-17 29-40-27 14-25z"/>
+      <path d="M343 408l-29 17-22-43 25-14z"/>
+      <path d="M273 442h-34l5-48h24z"/>
+      <path d="M178 421l-29-17 27-40 25 14z"/>
+      <path d="M104 343l-17-29 43-22 14 25z"/>
+      <path d="M70 273v-34l48 5v24z"/>
+      <path d="M91 178l17-29 40 27-14 25z"/>
+      <path d="M169 104l29-17 22 43-25 14z"/>
+    </g>
+
+    <path d="M256 108c-82 0-148 66-148 148s66 148 148 148 148-66 148-148-66-148-148-148z" fill="url(#sun)" stroke="#ffdd62" stroke-width="5"/>
+
+    <ellipse cx="216" cy="174" rx="52" ry="27" fill="#fff8bb" opacity=".24" transform="rotate(-28 216 174)"/>
+
+    <g fill="#6e321e">
+      <ellipse cx="207" cy="243" rx="11" ry="17"/>
+      <ellipse cx="305" cy="243" rx="11" ry="17"/>
+    </g>
+    <g fill="#fff8bc">
+      <circle cx="210" cy="238" r="4"/>
+      <circle cx="308" cy="238" r="4"/>
+    </g>
+    <path d="M208 291c13 22 32 33 49 33s36-11 49-33" fill="none" stroke="#7e351b" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="172" cy="282" r="13" fill="#f0782b" opacity=".4"/>
+    <circle cx="340" cy="282" r="13" fill="#f0782b" opacity=".4"/>
+
+    <g stroke="#ffcf58" stroke-width="5" opacity=".78">
+      <path d="M256 75v-18"/>
+      <path d="M437 256h18"/>
+      <path d="M256 437v18"/>
+      <path d="M75 256H57"/>
+    </g>
+
+    <g>
+      <circle cx="256" cy="62" r="25" fill="#24131a" stroke="#ffbb3c" stroke-width="5"/>
+      <circle cx="256" cy="62" r="14" fill="url(#node)"/>
+      <circle cx="250" cy="56" r="4" fill="#fff4a3" opacity=".8"/>
+
+      <circle cx="450" cy="256" r="25" fill="#24131a" stroke="#ffbb3c" stroke-width="5"/>
+      <circle cx="450" cy="256" r="14" fill="url(#node)"/>
+      <circle cx="444" cy="250" r="4" fill="#fff4a3" opacity=".8"/>
+
+      <circle cx="256" cy="450" r="25" fill="#24131a" stroke="#ffbb3c" stroke-width="5"/>
+      <circle cx="256" cy="450" r="14" fill="url(#node)"/>
+      <circle cx="250" cy="444" r="4" fill="#fff4a3" opacity=".8"/>
+
+      <circle cx="62" cy="256" r="25" fill="#24131a" stroke="#ffbb3c" stroke-width="5"/>
+      <circle cx="62" cy="256" r="14" fill="url(#node)"/>
+      <circle cx="56" cy="250" r="4" fill="#fff4a3" opacity=".8"/>
+    </g>
+  </g>
+
+  <circle cx="256" cy="256" r="248" fill="none" stroke="#ffb83e" stroke-width="8" opacity=".42"/>
+</svg>

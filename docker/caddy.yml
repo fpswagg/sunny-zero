@@ -1,0 +1,19 @@
+# HTTPS for Sunny with Caddy (automatic Let's Encrypt certificates). See docs/HTTPS.md.
+#   SUNNY_HOST=sunny.example.com docker compose -f docker/caddy.yml up -d
+# Needs ports 80 and 443 free and a DNS A record for SUNNY_HOST pointing at this server.
+# Sunny itself keeps SUNNY_BIND=127.0.0.1: Caddy runs on the host network and reaches it locally.
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: sunny-caddy
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      SUNNY_HOST: ${SUNNY_HOST:?set SUNNY_HOST to your domain}
+      SUNNY_PORT: ${SUNNY_PORT:-3210}
+    command: caddy reverse-proxy --from ${SUNNY_HOST} --to 127.0.0.1:${SUNNY_PORT:-3210}
+    volumes:
+      - caddy-data:/data
+
+volumes:
+  caddy-data:

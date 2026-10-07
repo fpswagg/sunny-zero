@@ -1,0 +1,23 @@
+# Postgres for Sunny, reachable only from this machine.
+#   docker compose up -d      start it (data kept in the "sunny-db" volume)
+# Matches the default SUNNY_DATABASE_URL in .env.example. Change the password for anything public.
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: sunny-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sunny
+      POSTGRES_PASSWORD: sunny
+      POSTGRES_DB: sunny
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - sunny-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sunny"]
+      interval: 10s
+      retries: 5
+
+volumes:
+  sunny-db:

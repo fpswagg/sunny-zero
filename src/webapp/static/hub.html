@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="__LANG__" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agents</title>
+<meta name="theme-color" content="#0b0b0f">
+<meta name="color-scheme" content="dark light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Agents">
+<link rel="manifest" href="/a/hub.webmanifest">
+<link rel="icon" href="/a/hub-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/a/hub-icon-180.png">
+<link rel="stylesheet" href="/a/hub.css">
+</head>
+<body>
+<main id="stage" class="stage">
+  <div id="bgs" class="bgs" aria-hidden="true"></div>
+  <button id="themeBtn" class="fab tl" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.5 0-1-.1-1.4A5.5 5.5 0 0 1 13.4 3.1 9 9 0 0 0 12 3z"/></svg></button>
+  <button id="searchBtn" class="fab tr" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+  <span id="offline" class="offline" hidden></span>
+  <div id="track" class="track" tabindex="0" role="region" aria-roledescription="carousel"></div>
+  <p id="msg" class="msg" role="status" hidden></p>
+  <div class="foot">
+    <p id="hint" class="hint"></p>
+    <div id="dots" class="dots" role="tablist"></div>
+    <button id="installBtn" class="install" type="button" hidden></button>
+  </div>
+</main>
+
+<section id="work" class="work" aria-label="Agent" inert>
+  <header class="strip">
+    <button id="backBtn" class="sbtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div id="chips" class="chips" role="tablist"></div>
+    <button id="addBtn" class="sbtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  </header>
+  <div id="panes" class="panes"></div>
+</section>
+
+<div id="pill" class="callpill" hidden>
+  <button id="pillMain" class="pmain" type="button"><span class="pav"><img alt="" width="34" height="34"></span><span class="ptxt"><b></b><small></small></span></button>
+  <button id="pillSwitch" class="pbtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h12M16 4l4 4-4 4M17 16H5M8 12l-4 4 4 4"/></svg></button>
+  <button id="pillMute" class="pbtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/><path class="slash" d="M3 3l18 18"/></svg></button>
+  <button id="pillEnd" class="pbtn end" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.7 14.6a13 13 0 0 1 16.6 0 1 1 0 0 1 .1 1.5l-1.8 1.8a1 1 0 0 1-1.3.1l-2.1-1.5a1 1 0 0 1-.4-.9l.1-1.7a10 10 0 0 0-5.8 0l.1 1.7a1 1 0 0 1-.4.9l-2.1 1.5a1 1 0 0 1-1.3-.1l-1.8-1.8a1 1 0 0 1 .1-1.5z"/></svg></button>
+</div>
+
+<div id="search" class="search" hidden role="dialog" aria-modal="true">
+  <div class="sbox">
+    <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go">
+    <ul id="results" role="listbox"></ul>
+  </div>
+</div>
+<div id="live" class="sr" aria-live="polite"></div>
+<script src="/a/hub.js" defer></script>
+</body>
+</html>

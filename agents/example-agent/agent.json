@@ -1,0 +1,10 @@
+{
+  "name": "example-agent",
+  "description": "Template: a small research assistant that searches the web, answers with sources and keeps short notes. Copy it, rename it, make it yours.",
+  "model": "sonnet",
+  "tools": ["Read", "Write", "Edit", "Glob", "Grep", "WebSearch", "WebFetch"],
+  "triggers": [{ "type": "manual" }],
+  "access": { "profile": "restricted" },
+  "memory": { "session": "conversation", "notes": true },
+  "enabled": false
+}

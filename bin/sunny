@@ -1,0 +1,4 @@
+#!/bin/sh
+# Runs the Sunny CLI from anywhere: link it with `ln -s "$PWD/bin/sunny" ~/.local/bin/sunny`.
+DIR=$(dirname "$(readlink -f "$0")")/..
+exec "$DIR/node_modules/.bin/tsx" "$DIR/src/cli.ts" "$@"
